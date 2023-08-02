@@ -6,7 +6,7 @@ export default class FindAllProductsUseCase implements UseCaseInterface {
     constructor(private productRepository: ProductGateway) {
 
     }
-    async execute(input: any): Promise<any> {
+    async execute(): Promise<any> {
         const products = await this.productRepository.findAll();
         return {
             products: products.map((product) => ({
