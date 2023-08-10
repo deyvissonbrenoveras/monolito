@@ -27,7 +27,7 @@ describe("Find all products usecase unit test", () => {
     it("should find all product", async () => {
         const productRepository = MockRepository();
         const usecase = new FindAllProductsUseCase(productRepository);
-        const result = await usecase.execute({});
+        const result = await usecase.execute();
 
         expect(productRepository.findAll).toHaveBeenCalled()
         expect(result.products.length).toBe(2);

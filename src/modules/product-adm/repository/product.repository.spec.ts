@@ -61,7 +61,7 @@ describe("ProductRepository test", () => {
 
         const product = await productRepository.find("1")
 
-        expect(product.id).toEqual("1");
+        expect(product.id.id).toEqual("1");
         expect(product.name).toEqual("Product 1");
         expect(product.description).toEqual("Product 1 description");
         expect(product.purchasePrice).toEqual(100);

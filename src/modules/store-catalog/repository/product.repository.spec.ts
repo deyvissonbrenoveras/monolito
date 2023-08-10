@@ -40,11 +40,11 @@ describe("ProductRepository test", () => {
         const products = await productRepository.findAll();
 
         expect(products.length).toBe(2);
-        expect(products[0].id).toBe("1");
+        expect(products[0].id.id).toBe("1");
         expect(products[0].name).toBe("Product 1");
         expect(products[0].description).toBe("Description 1");
         expect(products[0].salesPrice).toBe(100);
-        expect(products[1].id).toBe("2");
+        expect(products[1].id.id).toBe("2");
         expect(products[1].name).toBe("Product 2");
         expect(products[1].description).toBe("Description 2");
         expect(products[1].salesPrice).toBe(200);
@@ -60,7 +60,7 @@ describe("ProductRepository test", () => {
         const productRepository = new ProductRepository();
         const product = await productRepository.find("1");
 
-        expect(product.id).toBe("1");
+        expect(product.id.id).toBe("1");
         expect(product.name).toBe("Product 1");
         expect(product.description).toBe("Description 1");
         expect(product.salesPrice).toBe(100);
